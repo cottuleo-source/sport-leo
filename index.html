@@ -18,7 +18,7 @@ h2 { font-size:1.05em; margin:30px 0 12px; color:var(--accent); border-bottom:1p
 .tab:hover { color:var(--ink); border-color:#2c4a2e; }
 .tab.active { background:var(--accent); color:#06150a; border-color:var(--accent); }
 .page { display:none; } .page.active { display:block; }
-.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(158px,1fr)); gap:12px; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(143px,1fr)); gap:12px; }
 .card { background:var(--surface); border:1px solid var(--line); border-left:2px solid var(--line); padding:13px; }
 .card .k { font-size:.72em; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; }
 .card .v { font-size:1.65em; font-weight:600; margin:3px 0 2px; font-variant-numeric:tabular-nums; }
@@ -131,7 +131,7 @@ function line(id, series, opts) {
   const n = series[0].data.length;
   const X = i => pad.l + (W - pad.l - pad.r) * (n < 2 ? 0.5 : i / (n - 1));
   const Y = v => pad.t + (H - pad.t - pad.b) * (1 - (v - min) / (max - min));
-  ctx.strokeStyle = '#1f3320'; ctx.fillStyle = '#9fb3a3'; ctx.font = '20px sans-serif';
+  ctx.strokeStyle = '#243d27'; ctx.fillStyle = '#c3d4c6'; ctx.font = '20px sans-serif';
   for (let i = 0; i <= 4; i++) {
     const v = min + (max - min) * i / 4, y = Y(v);
     ctx.beginPath(); ctx.moveTo(pad.l, y); ctx.lineTo(W - pad.r, y); ctx.stroke();
